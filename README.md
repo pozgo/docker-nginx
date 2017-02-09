@@ -1,6 +1,5 @@
 # Nginx docker container
-[![Circle CI](https://circleci.com/gh/pozgo/docker-nginx.svg?style=svg)](https://circleci.com/gh/pozgo/docker-nginx)
-[![CircleCI Build Status](https://img.shields.io/circleci/project/pozgo/docker-nginx/master.svg)](https://circleci.com/gh/pozgo/docker-nginx)
+[![CircleCI Build Status](https://img.shields.io/circleci/project/pozgo/docker-nginx/master.svg)](https://circleci.com/gh/pozgo/docker-nginx)  
 [![GitHub Open Issues](https://img.shields.io/github/issues/pozgo/docker-nginx.svg)](https://github.com/pozgo/docker-nginx/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/pozgo/docker-nginx.svg)](https://github.com/pozgo/docker-nginx)
 [![GitHub Forks](https://img.shields.io/github/forks/pozgo/docker-nginx.svg)](https://github.com/pozgo/docker-nginx)  
@@ -129,7 +128,3 @@ to your own/custom vhost file (which you surely create for your application). Ad
 
 Author: Przemyslaw Ozgo (<linux@ozgo.info>)  
 This work is also inspired by [million12](https://github.com/million12)'s work on their [docker images](https://github.com/million12/docker-nginx). Many thanks!
-
----
-
-**Sponsored by [Prototype Brewery](http://prototypebrewery.io/)** - the new prototyping tool for building highly-interactive prototypes of your website or web app. Built on top of [Neos CMS](https://www.neos.io/) and [Zurb Foundation](http://foundation.zurb.com/) framework.

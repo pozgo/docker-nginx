@@ -16,27 +16,27 @@ RUN \
   unzip master.zip && rm -f /tmp/nginx-${NGINX_VERSION}.tar.gz /tmp/master.zip && \
   cd /tmp/nginx && \
   ./configure \
-  --user=www \
-  --group=www \
-  --prefix=/etc/nginx \
-  --sbin-path=/usr/sbin/nginx \
-  --conf-path=/etc/nginx/nginx.conf \
-  --pid-path=/var/run/nginx.pid \
-  --lock-path=/var/run/nginx.lock \
-  --error-log-path=/var/log/nginx/error.log \
-  --http-log-path=/var/log/nginx/access.log \
-  --with-http_gzip_static_module \
-  --with-http_stub_status_module \
-  --with-http_ssl_module \
-  --with-pcre \
-  --with-file-aio \
-  --with-http_realip_module \
-  --with-http_v2_module \
-  --add-module=/tmp/nginx-auth-ldap-master/ \
-  --with-ipv6 \
-  --with-debug && \
+    --user=www \
+    --group=www \
+    --prefix=/etc/nginx \
+    --sbin-path=/usr/sbin/nginx \
+    --conf-path=/etc/nginx/nginx.conf \
+    --pid-path=/var/run/nginx.pid \
+    --lock-path=/var/run/nginx.lock \
+    --error-log-path=/var/log/nginx/error.log \
+    --http-log-path=/var/log/nginx/access.log \
+    --with-http_gzip_static_module \
+    --with-http_stub_status_module \
+    --with-http_ssl_module \
+    --with-pcre \
+    --with-file-aio \
+    --with-http_realip_module \
+    --with-http_v2_module \
+    --add-module=/tmp/nginx-auth-ldap-master/ \
+    --with-ipv6 \
+    --with-debug && \
   make && make install && \
-  rm -rf /tmp/nginx-${NGINX_VERSION} && rm -rf /tmp/nginx-auth-ldap-master/ && \
+  rm -rf /tmp/nginx && rm -rf /tmp/nginx-auth-ldap-master/ && \
   yum groupremove -y "Development Tools" && \
   yum clean all && \
 
