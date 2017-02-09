@@ -1,15 +1,14 @@
 # Nginx docker container
-[![Circle CI](https://circleci.com/gh/million12/docker-nginx.svg?style=svg)](https://circleci.com/gh/million12/docker-nginx)
+[![Circle CI](https://circleci.com/gh/pozgo/docker-nginx.svg?style=svg)](https://circleci.com/gh/pozgo/docker-nginx)
+[![CircleCI Build Status](https://img.shields.io/circleci/project/pozgo/docker-nginx/master.svg)](https://circleci.com/gh/pozgo/docker-nginx)
+[![GitHub Open Issues](https://img.shields.io/github/issues/pozgo/docker-nginx.svg)](https://github.com/pozgo/docker-nginx/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/pozgo/docker-nginx.svg)](https://github.com/pozgo/docker-nginx)
+[![GitHub Forks](https://img.shields.io/github/forks/pozgo/docker-nginx.svg)](https://github.com/pozgo/docker-nginx)  
+[![Stars on Docker Hub](https://img.shields.io/docker/stars/polinux/nginx.svg)](https://hub.docker.com/r/polinux/nginx)
+[![Pulls on Docker Hub](https://img.shields.io/docker/pulls/polinux/nginx.svg)](https://hub.docker.com/r/polinux/nginx)  
+[![](https://images.microbadger.com/badges/image/polinux/nginx.svg)](http://microbadger.com/images/polinux/nginx)
 
-[![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-nginx/master.svg)](https://circleci.com/gh/million12/docker-nginx)
-[![GitHub Open Issues](https://img.shields.io/github/issues/million12/docker-nginx.svg)](https://github.com/million12/docker-nginx/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/million12/docker-nginx.svg)](https://github.com/million12/docker-nginx)
-[![GitHub Forks](https://img.shields.io/github/forks/million12/docker-nginx.svg)](https://github.com/million12/docker-nginx)
-[![Stars on Docker Hub](https://img.shields.io/docker/stars/million12/nginx.svg)](https://hub.docker.com/r/million12/nginx)
-[![Pulls on Docker Hub](https://img.shields.io/docker/pulls/million12/nginx.svg)](https://hub.docker.com/r/million12/nginx)
-[![](https://images.microbadger.com/badges/image/million12/nginx.svg)](http://microbadger.com/images/million12/nginx)
-
-This is a [million12/nginx](https://registry.hub.docker.com/u/million12/nginx/) docker container with Nginx web server, nicely tuned for a better performance.
+This is a [polinux/nginx](https://registry.hub.docker.com/u/polinux/nginx/) docker container with Nginx web server, nicely tuned for a better performance.
 
 # Features
 
@@ -60,13 +59,13 @@ Eample output:
 ## Usage
 
 ```
-docker run -d --name=web -p=80:80 -p=443:443 -e "NGINX_GENERATE_DEFAULT_VHOST=true" million12/nginx
+docker run -d --name=web -p=80:80 -p=443:443 -e "NGINX_GENERATE_DEFAULT_VHOST=true" polinux/nginx
 ```
 
 With data container:  
 ```
 docker run -d --name=web-data -v /data busybox
-docker run -d --name=web --volumes-from=web-data -p=80:80 -e "NGINX_GENERATE_DEFAULT_VHOST=true" million12/nginx
+docker run -d --name=web --volumes-from=web-data -p=80:80 -e "NGINX_GENERATE_DEFAULT_VHOST=true" polinux/nginx
 ```
 
 After that you can see the default vhost content (something like: '*default vhost # created on [timestamp]*') when you open http://CONTAINER_IP:PORT/ in the browser.
@@ -128,8 +127,8 @@ to your own/custom vhost file (which you surely create for your application). Ad
 
 ## Authors
 
-Author: Marcin Ryzycki (<marcin@m12.io>)  
-Author: Przemyslaw Ozgo (<linux@ozgo.info>)
+Author: Przemyslaw Ozgo (<linux@ozgo.info>)  
+This work is also inspired by [million12](https://github.com/million12)'s work on their [docker images](https://github.com/million12/docker-nginx). Many thanks!
 
 ---
 
